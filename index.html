@@ -1,725 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Privacy Policy and Terms of Use for Value Investor app by Andrew Hayes">
-<title>Privacy Policy & Terms of Use — Value Investor</title>
-<style>
-  :root {
-    --ink:       #0e0e0e;
-    --ink-soft:  #4a4a4a;
-    --ink-faint: #9a9a9a;
-    --bg:        #f0ede6;
-    --bg-card:   #ffffff;
-    --gold:      #b8933a;
-    --gold-soft: #f5edd8;
-    --gold-dark: #8a6a1f;
-    --border:    #dedad2;
-    --green:     #1a7a4a;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  body {
-    font-family: Georgia, 'Times New Roman', serif;
-    background: var(--bg);
-    color: var(--ink);
-    line-height: 1.8;
-    padding: 0 0 80px;
-  }
-
-  /* ── Header ── */
-  .site-header {
-    background: linear-gradient(135deg, #1c1209 0%, #3a2508 100%);
-    padding: 40px 24px 36px;
-    text-align: center;
-  }
-  .site-header .app-name {
-    font-family: Georgia, serif;
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--gold);
-    letter-spacing: 0.02em;
-    margin-bottom: 6px;
-  }
-  .site-header .page-title {
-    font-size: 15px;
-    color: rgba(255,255,255,0.65);
-    font-family: Arial, sans-serif;
-    font-weight: 400;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-  }
-
-  /* ── Meta bar ── */
-  .meta-bar {
-    background: var(--gold-soft);
-    border-bottom: 1px solid #e0c87a;
-    padding: 10px 24px;
-    display: flex;
-    justify-content: center;
-    gap: 32px;
-    flex-wrap: wrap;
-  }
-  .meta-item {
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-    color: var(--gold-dark);
-  }
-  .meta-item strong { font-weight: 700; }
-
-  /* ── Content ── */
-  .content {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 48px 24px 0;
-  }
-
-  /* Intro box */
-  .intro-box {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-left: 4px solid var(--gold);
-    border-radius: 8px;
-    padding: 20px 24px;
-    margin-bottom: 40px;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    color: var(--ink-soft);
-    line-height: 1.7;
-  }
-
-  /* Section headings */
-  h2 {
-    font-family: Georgia, serif;
-    font-size: 19px;
-    font-weight: 700;
-    color: var(--ink);
-    margin: 40px 0 12px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--border);
-  }
-  h2 .section-num {
-    color: var(--gold);
-    margin-right: 8px;
-  }
-
-  /* Body text */
-  p {
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    color: var(--ink-soft);
-    margin-bottom: 14px;
-    line-height: 1.75;
-  }
-
-  /* Lists */
-  ul {
-    margin: 8px 0 14px 20px;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    color: var(--ink-soft);
-    line-height: 1.75;
-  }
-  ul li { margin-bottom: 6px; }
-  ul li::marker { color: var(--gold); }
-
-  /* Highlight box */
-  .highlight {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 16px 20px;
-    margin: 16px 0;
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    color: var(--ink-soft);
-  }
-  .highlight strong { color: var(--ink); }
-
-  /* Contact box */
-  .contact-box {
-    background: linear-gradient(135deg, #1c1209, #3a2508);
-    border-radius: 12px;
-    padding: 24px 28px;
-    margin-top: 48px;
-    color: #fff;
-  }
-  .contact-box h3 {
-    font-family: Georgia, serif;
-    font-size: 17px;
-    color: var(--gold);
-    margin-bottom: 12px;
-  }
-  .contact-box p {
-    color: rgba(255,255,255,0.75);
-    margin-bottom: 8px;
-    font-size: 14px;
-  }
-  .contact-box a {
-    color: var(--gold);
-    text-decoration: none;
-  }
-
-  /* Footer */
-  .site-footer {
-    text-align: center;
-    margin-top: 56px;
-    padding: 24px;
-    border-top: 1px solid var(--border);
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-    color: var(--ink-faint);
-  }
-
-  /* Version stamp */
-  .version-stamp {
-    display: inline-block;
-    background: var(--gold-soft);
-    border: 1px solid #e0c87a;
-    border-radius: 6px;
-    padding: 4px 10px;
-    font-family: monospace;
-    font-size: 11px;
-    color: var(--gold-dark);
-    margin-bottom: 24px;
-  }
-
-  /* ── Section divider ── */
-  .section-divider {
-    border: none;
-    border-top: 2px solid var(--border);
-    margin: 60px 0 48px;
-  }
-
-  /* ── Page anchor nav ── */
-  .page-nav {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-bottom: 32px;
-  }
-  .page-nav a {
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--gold-dark);
-    background: var(--gold-soft);
-    border: 1px solid #e0c87a;
-    border-radius: 20px;
-    padding: 5px 14px;
-    text-decoration: none;
-    letter-spacing: 0.03em;
-  }
-  .page-nav a:hover { background: #eeddb0; }
-
-  @media (max-width: 600px) {
-    .site-header .app-name { font-size: 22px; }
-    h2 { font-size: 17px; }
-    .content { padding: 32px 16px 0; }
-    .meta-bar { gap: 16px; }
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Value Investor</title>
+  <style>
+    :root {
+      --navy: #0D1B2A;
+      --deep-blue: #1A2B3C;
+      --card: #1E2D3E;
+      --gold: #C9A84C;
+      --text: #E8EDF2;
+      --text-secondary: #8A9BB0;
+      --divider: #2A3A4E;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--navy);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 0 16px 40px;
+    }
+    header {
+      background-color: var(--deep-blue);
+      border-bottom: 1px solid var(--divider);
+      padding: 28px 20px;
+      text-align: center;
+      margin: 0 -16px 32px;
+    }
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    header p {
+      font-size: 0.85rem;
+      color: var(--gold);
+      letter-spacing: 0.8px;
+    }
+    .container { max-width: 760px; margin: 0 auto; }
+    .last-updated {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+    }
+    section {
+      background-color: var(--card);
+      border-radius: 12px;
+      border: 1px solid var(--divider);
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+    section h2 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    section p, section li {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+    section ul { padding-left: 20px; }
+    section li { margin-bottom: 6px; }
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer {
+      text-align: center;
+      margin-top: 32px;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Value Investor</h1>
+    <p>Privacy Policy</p>
+  </header>
 
-<!-- Header -->
-<div class="site-header">
-  <div class="app-name">Value Investor</div>
-  <div class="page-title">Privacy Policy &amp; Terms of Use</div>
-</div>
+  <div class="container">
+    <p class="last-updated">Last updated: 4 May 2026</p>
 
-<!-- Meta bar -->
-<div class="meta-bar">
-  <div class="meta-item"><strong>Owner:</strong> Andrew Hayes</div>
-  <div class="meta-item"><strong>Version:</strong> 1.1</div>
-  <div class="meta-item"><strong>Effective:</strong> 27 April 2026</div>
-  <div class="meta-item"><strong>Last Updated:</strong> 27 April 2026</div>
-</div>
+    <section>
+      <h2>Overview</h2>
+      <p>
+        Value Investor is a stock analysis application for Android that helps users evaluate
+        ASX and US equities using Warren Buffett and Benjamin Graham value investing principles.
+        This policy explains what data the app accesses, how it is used, and your rights as a user.
+      </p>
+    </section>
 
-<!-- Content -->
-<div class="content">
+    <section>
+      <h2>Data We Do Not Collect</h2>
+      <p>Value Investor does <strong>not</strong> collect, transmit, or store any of the following on external servers:</p>
+      <ul>
+        <li>Your name, email address, or any personally identifiable information</li>
+        <li>Your account credentials or login details</li>
+        <li>Your location or device location data</li>
+        <li>Your camera, microphone, or contact list data</li>
+        <li>Your browsing history or in-app behaviour analytics</li>
+      </ul>
+      <p>The app does not require an account, login, or registration of any kind.</p>
+    </section>
 
-  <div class="version-stamp">v1.1 — 27 April 2026</div>
+    <section>
+      <h2>Data Stored Locally on Your Device</h2>
+      <p>The following data is stored in a local SQLite database on your device only and is never transmitted to our servers:</p>
+      <ul>
+        <li>Cached financial data (stock prices, ratios, scores) fetched from third-party APIs</li>
+        <li>Your watchlist (tickers and company names you have bookmarked)</li>
+        <li>Your disclaimer acceptance preference</li>
+        <li>Index and sector data refreshed periodically from our cloud data cache</li>
+      </ul>
+      <p>This data remains entirely on your device and can be cleared by uninstalling the app.</p>
+    </section>
 
-  <!-- Page nav -->
-  <div class="page-nav">
-    <a href="#privacy">Privacy Policy</a>
-    <a href="#terms">Terms of Use</a>
+    <section>
+      <h2>Third-Party Services</h2>
+      <p>Value Investor uses the following third-party services. Each service operates under its own privacy policy.</p>
+
+      <p><strong>Google AdMob</strong><br/>
+      Banner advertisements are served by Google AdMob. AdMob may collect advertising identifiers
+      (Android Advertising ID) and other anonymous usage signals to deliver relevant ads.
+      You can opt out of personalised advertising in your device settings under
+      <em>Privacy → Ads</em>.
+      <br/><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></p>
+
+      <p style="margin-top:12px;"><strong>Yahoo Finance</strong><br/>
+      Financial data (stock quotes, historical prices, financial statements) is fetched directly
+      from Yahoo Finance public APIs. No personal data is sent to Yahoo Finance. Requests are made
+      using standard HTTP headers. Yahoo Finance's data is used in accordance with their terms of service.
+      <br/><a href="https://legal.yahoo.com/us/en/yahoo/privacy/index.html" target="_blank" rel="noopener">Yahoo Privacy Policy</a></p>
+
+      <p style="margin-top:12px;"><strong>Financial Modeling Prep (FMP)</strong><br/>
+      US index quotes and supplementary financial ratios are sourced from the Financial Modeling Prep API.
+      No personal data is transmitted. API calls contain only stock ticker symbols.
+      <br/><a href="https://financialmodelingprep.com/privacy-policy" target="_blank" rel="noopener">FMP Privacy Policy</a></p>
+
+      <p style="margin-top:12px;"><strong>Cloudflare R2 (Data Cache)</strong><br/>
+      Pre-computed sector rankings and index data are downloaded from a Cloudflare R2 bucket.
+      These are read-only downloads; no personal data is uploaded.</p>
+    </section>
+
+    <section>
+      <h2>Permissions</h2>
+      <p>Value Investor requests the following Android permissions:</p>
+      <ul>
+        <li><strong>INTERNET</strong> — Required to fetch financial data from third-party APIs and display banner ads.</li>
+        <li><strong>ACCESS_NETWORK_STATE</strong> — Used to check connectivity before making API requests.</li>
+      </ul>
+      <p>No other permissions are requested. The app does not access your camera, microphone, contacts, location, storage, or phone state.</p>
+    </section>
+
+    <section>
+      <h2>Children's Privacy</h2>
+      <p>
+        Value Investor is not directed at children under the age of 13. We do not knowingly collect any
+        personal information from children. The app is intended for users aged 13 and over.
+        Google AdMob ads served within the app are not configured for child-directed treatment.
+      </p>
+    </section>
+
+    <section>
+      <h2>Data Security</h2>
+      <p>
+        Because Value Investor does not transmit personal data to external servers, there is no personal
+        data at risk of a server-side breach. All locally cached financial data on your device is
+        protected by Android's standard application sandbox security model.
+      </p>
+    </section>
+
+    <section>
+      <h2>Australian Privacy Law</h2>
+      <p>
+        This application is developed in Australia. The developer is committed to complying with the
+        <em>Privacy Act 1988</em> (Cth) and the Australian Privacy Principles (APPs) where applicable.
+        As no personal information is collected, most APP obligations do not apply; however, we are
+        committed to transparency about our data practices.
+      </p>
+    </section>
+
+    <section>
+      <h2>Changes to This Policy</h2>
+      <p>
+        This privacy policy may be updated from time to time to reflect changes in the app or applicable law.
+        Updates will be posted to this page with a revised "Last updated" date. We encourage you to review
+        this policy periodically.
+      </p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>
+        If you have questions or concerns about this privacy policy or the app's data practices,
+        please contact the developer at:
+        <br/><a href="mailto:andrew.hayes.australia@gmail.com">andrew.hayes.australia@gmail.com</a>
+      </p>
+    </section>
   </div>
 
-  <div id="privacy"></div>
-
-  <!-- Intro -->
-  <div class="intro-box">
-    This Privacy Policy explains how <strong>Andrew Hayes</strong>
-    ("I", "me", "my") collects, uses, stores, and protects information
-    when you use the <strong>Value Investor</strong> mobile application
-    ("the App") available on the Google Play Store.
-    By downloading and using the App you agree to the practices
-    described in this policy. If you do not agree, please do not
-    use the App.
-  </div>
-
-  <!-- 1 -->
-  <h2><span class="section-num">1.</span> About This App</h2>
-  <p>
-    Value Investor is a free financial data application for Android that
-    displays algorithmically screened stock market data, valuation metrics,
-    and publicly available financial information. The App is supported by
-    advertising through Google AdMob. No subscription fees or in-app
-    purchases are charged to users.
-  </p>
-  <p>
-    The App is intended for users aged 18 and over. By using the App
-    you confirm you are at least 18 years of age.
-  </p>
-
-  <!-- 2 -->
-  <h2><span class="section-num">2.</span> Information Collected</h2>
-
-  <p><strong>Information you provide directly:</strong></p>
-  <ul>
-    <li>Your agreement to these terms, recorded locally on your device
-        when you tick the consent checkbox on first launch. This record
-        includes a timestamp and the version of the terms you agreed to.
-        It is stored only on your device and is never transmitted.</li>
-  </ul>
-
-  <p><strong>Information collected automatically by Google AdMob:</strong></p>
-  <p>
-    The App uses Google AdMob to display banner advertisements. AdMob
-    may automatically collect the following information to serve
-    relevant ads:
-  </p>
-  <ul>
-    <li>Advertising identifier (Google Advertising ID)</li>
-    <li>IP address and approximate location (city/region level)</li>
-    <li>Device type, model, and operating system version</li>
-    <li>App usage data and interaction with advertisements</li>
-    <li>Network connection type (Wi-Fi, mobile data)</li>
-    <li>Time zone and language settings</li>
-  </ul>
-  <p>
-    This data is collected and processed by Google LLC under their own
-    privacy policy. I do not have direct access to this data.
-    Google's privacy policy is available at:
-    <a href="https://policies.google.com/privacy" target="_blank"
-       style="color:var(--gold-dark)">policies.google.com/privacy</a>
-  </p>
-
-  <p><strong>Information I do NOT collect:</strong></p>
-  <ul>
-    <li>Your name, email address, or any account information</li>
-    <li>Your financial details, investment holdings, or trading activity</li>
-    <li>Precise GPS location</li>
-    <li>Contacts, camera, microphone, or any device sensors</li>
-    <li>Any data from other apps on your device</li>
-  </ul>
-
-  <!-- 3 -->
-  <h2><span class="section-num">3.</span> How Information Is Used</h2>
-  <p>The information collected is used solely for the following purposes:</p>
-  <ul>
-    <li>To display relevant banner advertisements through Google AdMob,
-        which funds the free operation of the App</li>
-    <li>To record your consent to these terms locally on your device</li>
-    <li>To operate the daily automated data update (6:00 AM UTC scheduler)
-        which fetches publicly available financial data from third-party
-        sources on your device</li>
-    <li>To store financial screening results in a local database on
-        your device for display in the App</li>
-  </ul>
-  <p>
-    I do not use your information for any other purpose. I do not sell,
-    rent, trade, or share your personal information with any third party
-    other than Google AdMob as described in Section 2.
-  </p>
-
-  <!-- 4 -->
-  <h2><span class="section-num">4.</span> Data Storage</h2>
-  <p>
-    All financial data and your consent record are stored locally on
-    your device using SQLite — a standard mobile database. This data is:
-  </p>
-  <ul>
-    <li>Stored only on your device — never uploaded to any server</li>
-    <li>Automatically deleted when you uninstall the App</li>
-    <li>Not backed up to any cloud service by the App itself
-        (your device's own backup settings may back up app data
-        according to your device manufacturer's policy)</li>
-    <li>Not accessible to me or any third party</li>
-  </ul>
-
-  <!-- 5 -->
-  <h2><span class="section-num">5.</span> Third-Party Data Sources</h2>
-  <p>
-    The App fetches publicly available financial data from the following
-    third-party sources. These requests are made from your device
-    directly to these services:
-  </p>
-  <ul>
-    <li><strong>Yahoo Finance</strong> — market prices, index quotes, and
-        financial ratios for all stocks and indices</li>
-    <li><strong>Financial Modeling Prep (FMP)</strong> — valuation ratios
-        for selected US stocks (used as a fallback only when Yahoo Finance
-        data is unavailable)</li>
-    <li><strong>GitHub (AndrewHayes-Dev/ASX300-data)</strong> — the ASX 300
-        stock universe dataset used to populate Australian market screens</li>
-  </ul>
-  <p>
-    These requests may expose your device's IP address to these services
-    as is standard for any internet request. I do not control these
-    services and their own privacy policies apply to any data they
-    collect. The App does not send any personally identifying information
-    to these services.
-  </p>
-
-  <!-- 6 -->
-  <h2><span class="section-num">6.</span> Advertising — Google AdMob</h2>
-  <p>
-    The App displays banner advertisements served by Google AdMob.
-    AdMob uses your advertising identifier to serve personalised ads.
-    You can opt out of personalised advertising at any time:
-  </p>
-
-  <div class="highlight">
-    <strong>On Android:</strong> Settings → Google → Ads →
-    "Delete advertising ID" or "Opt out of Ads Personalisation"
-  </div>
-
-  <p>
-    If you opt out, you will still see advertisements but they will
-    not be personalised to your interests. The App will continue to
-    function normally either way.
-  </p>
-  <p>
-    AdMob complies with the IAB Transparency and Consent Framework
-    (TCF) and applicable advertising regulations. For users in the
-    European Economic Area (EEA), United Kingdom, and Switzerland,
-    a consent dialog will be shown before personalised ads are
-    displayed, as required by GDPR and the UK GDPR.
-  </p>
-
-  <!-- 7 -->
-  <h2><span class="section-num">7.</span> Your Rights</h2>
-  <p>
-    Depending on your location, you may have the following rights
-    regarding your personal data:
-  </p>
-
-  <p><strong>Australia (Privacy Act 1988):</strong></p>
-  <ul>
-    <li>Right to access personal information held about you</li>
-    <li>Right to correct inaccurate personal information</li>
-    <li>Right to complain to the Office of the Australian Information
-        Commissioner (OAIC) at oaic.gov.au</li>
-  </ul>
-
-  <p><strong>European Union / EEA (GDPR):</strong></p>
-  <ul>
-    <li>Right to access, rectify, and erase your personal data</li>
-    <li>Right to restrict or object to processing</li>
-    <li>Right to data portability</li>
-    <li>Right to withdraw consent at any time</li>
-    <li>Right to lodge a complaint with your local supervisory authority</li>
-  </ul>
-
-  <p><strong>United Kingdom (UK GDPR):</strong></p>
-  <ul>
-    <li>Same rights as EU GDPR above</li>
-    <li>Right to complain to the Information Commissioner's Office (ICO)
-        at ico.org.uk</li>
-  </ul>
-
-  <p><strong>United States — California (CCPA/CPRA):</strong></p>
-  <ul>
-    <li>Right to know what personal information is collected</li>
-    <li>Right to delete personal information</li>
-    <li>Right to opt out of the sale of personal information
-        (note: I do not sell personal information)</li>
-    <li>Right to non-discrimination for exercising your rights</li>
-  </ul>
-
-  <p>
-    Because most data collected by the App is held by Google AdMob
-    rather than by me directly, many of the above rights should be
-    directed to Google. To exercise your rights regarding data I hold,
-    contact me using the details in Section 10.
-  </p>
-
-  <!-- 8 -->
-  <h2><span class="section-num">8.</span> Children's Privacy</h2>
-  <p>
-    The App is not directed at children under the age of 13 (or 16
-    in the EEA and UK). I do not knowingly collect personal information
-    from children. If you believe a child has used the App and provided
-    personal information, please contact me immediately using the
-    details in Section 10 and I will take steps to delete such
-    information promptly.
-  </p>
-
-  <!-- 9 -->
-  <h2><span class="section-num">9.</span> Changes to This Policy</h2>
-  <p>
-    I may update this Privacy Policy from time to time to reflect
-    changes in the App, applicable laws, or AdMob's data practices.
-    When changes are made:
-  </p>
-  <ul>
-    <li>The "Last Updated" date at the top of this page will be revised</li>
-    <li>The policy version number will be incremented</li>
-    <li>For material changes, users will be shown an updated consent
-        screen within the App requiring re-acknowledgement before
-        continuing to use the App</li>
-  </ul>
-  <p>
-    Continued use of the App after changes are posted constitutes
-    acceptance of the updated policy. You are encouraged to review
-    this page periodically.
-  </p>
-
-  <!-- 10 -->
-  <h2><span class="section-num">10.</span> Contact</h2>
-  <div class="contact-box">
-    <h3>Questions or Privacy Requests</h3>
-    <p>
-      If you have any questions about this Privacy Policy, wish to
-      exercise your data rights, or have a privacy concern, please
-      contact the app owner directly:
-    </p>
-    <p><strong style="color:var(--gold)">Andrew Hayes</strong></p>
-    <p>Developer and Owner — Value Investor App</p>
-    <p>Australia</p>
-    <p style="margin-top:12px;">
-      Email:
-      <a href="mailto:andrew.hayes.appdev@gmail.com">
-        andrew.hayes.appdev@gmail.com
-      </a>
-    </p>
-    <p style="margin-top:12px;font-size:13px;color:rgba(255,255,255,0.55);">
-      I aim to respond to all privacy enquiries within 30 days
-      in accordance with Australian Privacy Principle 12.
-    </p>
-  </div>
-
-  <!-- 11 -->
-  <h2><span class="section-num">11.</span> Governing Law</h2>
-  <p>
-    This Privacy Policy is governed by the laws of Australia,
-    including the <em>Privacy Act 1988</em> (Cth) and the Australian
-    Privacy Principles (APPs). For users in other jurisdictions,
-    additional rights may apply under local law as described in
-    Section 7 above.
-  </p>
-
-</div>
-
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!-- TERMS OF USE                                                    -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
-
-<div class="content">
-
-  <hr class="section-divider" id="terms">
-
-  <div class="version-stamp">Terms of Use — v1.1 · 27 April 2026</div>
-
-  <div class="intro-box">
-    These Terms of Use ("Terms") govern your access to and use of the
-    <strong>Value Investor</strong> mobile application ("the App") developed
-    and owned by <strong>Andrew Hayes</strong> ("I", "me", "my"), available
-    on the Google Play Store. By downloading or using the App you agree to
-    these Terms in full. If you do not agree, do not use the App.
-  </div>
-
-  <!-- T1 -->
-  <h2><span class="section-num">1.</span> Acceptance of Terms</h2>
-  <p>
-    By accessing or using the App, you confirm that you are at least 18 years
-    of age, have read and understood these Terms, and agree to be bound by
-    them. These Terms apply in addition to any terms imposed by the Google
-    Play Store and by applicable law.
-  </p>
-
-  <!-- T2 -->
-  <h2><span class="section-num">2.</span> Intellectual Property</h2>
-  <p>
-    The App and all of its content — including but not limited to source code,
-    algorithms, user interface design, graphics, text, layout, and the Value
-    Investor name and branding — are the exclusive intellectual property of
-    Andrew Hayes and are protected by copyright under the
-    <em>Copyright Act 1968</em> (Cth) and equivalent laws in other
-    jurisdictions.
-  </p>
-  <p>
-    Copyright in the App arises automatically upon creation and no
-    registration is required. All rights are reserved.
-  </p>
-  <ul>
-    <li>You may not copy, reproduce, modify, adapt, translate, distribute,
-        sell, sublicense, or create derivative works from any part of the
-        App or its content without my prior written consent.</li>
-    <li>You may not reverse-engineer, decompile, or disassemble the App
-        or attempt to extract its source code.</li>
-    <li>You may not remove, obscure, or alter any copyright, trademark,
-        or other proprietary notices displayed within the App.</li>
-  </ul>
-  <p>
-    Financial data displayed in the App is sourced from third-party providers
-    (Yahoo Finance, Financial Modeling Prep, and GitHub) and remains subject
-    to those providers' own terms and intellectual property rights. I make no
-    claim of ownership over that data.
-  </p>
-
-  <!-- T3 -->
-  <h2><span class="section-num">3.</span> Licence to Use</h2>
-  <p>
-    Subject to these Terms, I grant you a limited, non-exclusive,
-    non-transferable, revocable licence to download and use the App on your
-    personal Android device solely for your own personal, non-commercial
-    purposes. This licence does not include any right to:
-  </p>
-  <ul>
-    <li>Use the App for any commercial purpose or on behalf of any business</li>
-    <li>Distribute, sublicense, or make the App available to any third party</li>
-    <li>Modify or create derivative works based on the App</li>
-  </ul>
-
-  <!-- T4 -->
-  <h2><span class="section-num">4.</span> Prohibited Uses</h2>
-  <p>You agree that you will not use the App to:</p>
-  <ul>
-    <li>Make, or encourage others to make, investment decisions solely on the
-        basis of data displayed in the App without independent financial
-        advice</li>
-    <li>Scrape, harvest, or systematically extract data from the App using
-        automated means</li>
-    <li>Circumvent, disable, or interfere with security features of the App</li>
-    <li>Use the App in any way that violates applicable Australian law or the
-        laws of your jurisdiction, including the
-        <em>Corporations Act 2001</em> (Cth) regarding financial product advice</li>
-    <li>Impersonate me or misrepresent your affiliation with the App</li>
-    <li>Use the App to transmit any malicious code, spam, or harmful content</li>
-    <li>Resell, redistribute, or commercially exploit the App or any data
-        obtained from it</li>
-  </ul>
-
-  <!-- T5 -->
-  <h2><span class="section-num">5.</span> Financial Information Disclaimer</h2>
-  <p>
-    The App provides algorithmically screened financial data and valuation
-    metrics for informational and educational purposes only. The information
-    displayed does not constitute financial product advice, investment advice,
-    or a recommendation to buy or sell any security.
-  </p>
-  <p>
-    I am not a licensed financial adviser under the
-    <em>Corporations Act 2001</em> (Cth). You should seek independent advice
-    from a qualified financial adviser before making any investment decision.
-    Past performance and valuation metrics are not reliable indicators of
-    future results.
-  </p>
-  <div class="highlight">
-    <strong>Important:</strong> All financial data is sourced from third-party
-    providers and may be delayed, incomplete, or inaccurate. I do not warrant
-    the accuracy, completeness, or timeliness of any data displayed in the App.
-  </div>
-
-  <!-- T6 -->
-  <h2><span class="section-num">6.</span> Limitation of Liability</h2>
-  <p>
-    To the maximum extent permitted by law, I expressly disclaim all
-    warranties, express or implied, including any implied warranties of
-    merchantability, fitness for a particular purpose, and non-infringement.
-  </p>
-  <p>
-    I will not be liable for any direct, indirect, incidental, special,
-    consequential, or exemplary damages arising from or in connection with:
-  </p>
-  <ul>
-    <li>Your use of or inability to use the App</li>
-    <li>Any investment or financial decisions made in reliance on data
-        displayed in the App</li>
-    <li>Errors, inaccuracies, or omissions in the financial data displayed</li>
-    <li>Interruption or cessation of the App or its data feeds</li>
-    <li>Any unauthorised access to or alteration of your data</li>
-  </ul>
-  <p>
-    Nothing in these Terms excludes, restricts, or modifies any right or
-    remedy, or any guarantee, warranty, or other term or condition, implied
-    or imposed by the Australian Consumer Law that cannot lawfully be excluded
-    or limited.
-  </p>
-
-  <!-- T7 -->
-  <h2><span class="section-num">7.</span> Third-Party Services</h2>
-  <p>
-    The App relies on third-party data providers and services. I am not
-    responsible for the availability, accuracy, or content of those services.
-    Your use of third-party services is subject to their own terms and
-    privacy policies. Links to external websites or services do not imply
-    endorsement by me.
-  </p>
-
-  <!-- T8 -->
-  <h2><span class="section-num">8.</span> Changes to the App and Terms</h2>
-  <p>
-    I reserve the right to modify, suspend, or discontinue the App or any
-    part of it at any time without notice. I may also update these Terms from
-    time to time. Continued use of the App after changes are published
-    constitutes acceptance of the updated Terms. The "Last Updated" date
-    at the top of this page will reflect the most recent revision.
-  </p>
-
-  <!-- T9 -->
-  <h2><span class="section-num">9.</span> Termination</h2>
-  <p>
-    I may terminate or suspend your access to the App immediately, without
-    prior notice, if you breach these Terms or if required by applicable law.
-    Upon termination, your licence to use the App ceases immediately. Sections
-    2, 5, 6, and 10 of these Terms survive termination.
-  </p>
-
-  <!-- T10 -->
-  <h2><span class="section-num">10.</span> Governing Law</h2>
-  <p>
-    These Terms are governed by and construed in accordance with the laws of
-    the State of Queensland, Australia, and the federal laws of Australia
-    applicable therein. You irrevocably submit to the non-exclusive
-    jurisdiction of the courts of Queensland for the resolution of any
-    dispute arising out of or in connection with these Terms.
-  </p>
-
-  <!-- T11 -->
-  <h2><span class="section-num">11.</span> Contact</h2>
-  <div class="contact-box">
-    <h3>Questions About These Terms</h3>
-    <p>
-      If you have any questions about these Terms of Use or wish to request
-      permission to use any content from the App, please contact:
-    </p>
-    <p><strong style="color:var(--gold)">Andrew Hayes</strong></p>
-    <p>Developer and Owner — Value Investor App</p>
-    <p>Australia</p>
-    <p style="margin-top:12px;">
-      Email:
-      <a href="mailto:andrew.hayes.appdev@gmail.com">
-        andrew.hayes.appdev@gmail.com
-      </a>
-    </p>
-  </div>
-
-</div>
-
-<!-- Footer -->
-<div class="site-footer">
-  <p>© 2026 Andrew Hayes · Value Investor App · Australia</p>
-  <p style="margin-top:6px;">
-    v1.1 · Effective 27 April 2026
-  </p>
-</div>
-
+  <footer>
+    <p>&copy; 2026 Value Investor &mdash; Andrew Hayes &mdash; All rights reserved</p>
+  </footer>
 </body>
 </html>
