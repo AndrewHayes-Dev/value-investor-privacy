@@ -85,7 +85,7 @@
   </header>
 
   <div class="container">
-    <p class="last-updated">Last updated: 4 May 2026</p>
+    <p class="last-updated">Last updated: 29 August 2026</p>
 
     <section>
       <h2>Overview</h2>
@@ -107,6 +107,12 @@
         <li>Your browsing history or in-app behaviour analytics</li>
       </ul>
       <p>The app does not require an account, login, or registration of any kind.</p>
+      <p>
+        Two device-level identifiers are handled by Google services within the app: an advertising
+        identifier used by Google AdMob, and a push notification token used by Firebase Cloud Messaging.
+        Neither identifies you personally, and neither is collected or stored by the developer. Both are
+        described under <em>Third-Party Services</em> below.
+      </p>
     </section>
 
     <section>
@@ -146,6 +152,16 @@
       <p style="margin-top:12px;"><strong>Cloudflare R2 (Data Cache)</strong><br/>
       Pre-computed sector rankings and index data are downloaded from a Cloudflare R2 bucket.
       These are read-only downloads; no personal data is uploaded.</p>
+
+      <p style="margin-top:12px;"><strong>Firebase Cloud Messaging (Push Notifications)</strong><br/>
+      The app uses Firebase Cloud Messaging, a Google service, to send occasional notifications telling
+      you that refreshed market data is available. To deliver these, Firebase registers your device with
+      Google and assigns it a <em>registration token</em> — a random identifier for the app installation
+      on your device. This token is held by Google, is not linked to your name or any account, and is not
+      collected, stored, or read by the developer. It is reset if you reinstall the app or clear its data.
+      Notifications are optional: you may decline the notification permission when prompted, or turn
+      notifications off at any time in your device settings, and the app will continue to work normally.
+      <br/><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy &amp; Security</a></p>
     </section>
 
     <section>
@@ -154,6 +170,8 @@
       <ul>
         <li><strong>INTERNET</strong> — Required to fetch financial data from third-party APIs and display banner ads.</li>
         <li><strong>ACCESS_NETWORK_STATE</strong> — Used to check connectivity before making API requests.</li>
+        <li><strong>com.google.android.gms.permission.AD_ID</strong> — Allows Google AdMob to access the Android Advertising ID in order to serve ads. You can reset or delete this identifier at any time in your device settings.</li>
+        <li><strong>POST_NOTIFICATIONS</strong> — Allows the app to show notifications when refreshed market data is available. You are asked for this permission, and may decline it without affecting any other feature.</li>
       </ul>
       <p>No other permissions are requested. The app does not access your camera, microphone, contacts, location, storage, or phone state.</p>
     </section>
@@ -170,9 +188,37 @@
     <section>
       <h2>Data Security</h2>
       <p>
-        Because Value Investor does not transmit personal data to external servers, there is no personal
-        data at risk of a server-side breach. All locally cached financial data on your device is
-        protected by Android's standard application sandbox security model.
+        The developer operates no user accounts and no server that stores personal data, so there is no
+        store of personal information at risk of a server-side breach. All locally cached financial data
+        on your device is protected by Android's standard application sandbox security model. The
+        advertising and push notification identifiers described above are handled by Google under its own
+        security and privacy practices.
+      </p>
+    </section>
+
+    <section>
+      <h2>Users in the European Economic Area, the UK and Switzerland</h2>
+      <p>
+        If you use Value Investor in the EEA, the UK or Switzerland, you are shown a consent message the
+        first time the app runs, before any advertisement is requested. It asks whether you agree to your
+        data being used for personalised advertising and related purposes, and lets you consent, refuse,
+        or choose individual purposes and vendors under <em>Manage options</em>.
+      </p>
+      <p>
+        Your choice is recorded on your device using the IAB Transparency &amp; Consent Framework and is
+        passed to Google AdMob and its advertising partners. Refusing does not restrict any feature of the
+        app; you will simply see non-personalised or limited advertising instead.
+      </p>
+      <p>
+        You can change or withdraw your choice at any time by opening
+        <strong>Ad Privacy Settings</strong> at the bottom of the app's Home screen, which reopens the same
+        consent options. This link is shown only where these rules apply.
+      </p>
+      <p>
+        The consent message is provided by Google's Consent Management Platform. Google acts as a data
+        controller for the advertising data it processes; see the
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>
+        and Google's <a href="https://business.safety.google/adspartners/" target="_blank" rel="noopener">list of advertising partners</a>.
       </p>
     </section>
 
