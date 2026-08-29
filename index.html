@@ -110,8 +110,10 @@
       <p>
         Two device-level identifiers are handled by Google services within the app: an advertising
         identifier used by Google AdMob, and a push notification token used by Firebase Cloud Messaging.
-        Neither identifies you personally, and neither is collected or stored by the developer. Both are
-        described under <em>Third-Party Services</em> below.
+        Neither identifies you personally, and neither is collected or stored by the developer.
+        Separately, if you choose to send feedback, the message you write is stored so the developer can
+        read it — anonymously, with no identifier attached. All three are described under
+        <em>Third-Party Services</em> below.
       </p>
     </section>
 
@@ -153,6 +155,17 @@
       Pre-computed sector rankings and index data are downloaded from a Cloudflare R2 bucket.
       These are read-only downloads; no personal data is uploaded.</p>
 
+      <p style="margin-top:12px;"><strong>Cloud Firestore (Feedback Form)</strong><br/>
+      If — and only if — you choose to use the <em>Send Feedback</em> screen, the message you write is
+      stored in Cloud Firestore, a Google database service, so the developer can read it. Each submission
+      records only the text you type (up to 500 characters), the category you pick
+      (General, Bug Report or Feature Request), whether the device is Android or iOS, and the time of
+      submission. <strong>No name, email address, account or device identifier is attached</strong>, and
+      the app has no sign-in of any kind, so submissions cannot be traced back to you or linked to each
+      other. Because the message is free text, please do not include personal details you would rather not
+      share. Sending feedback is entirely optional and no other part of the app depends on it.
+      <br/><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy &amp; Security</a></p>
+
       <p style="margin-top:12px;"><strong>Firebase Cloud Messaging (Push Notifications)</strong><br/>
       The app uses Firebase Cloud Messaging, a Google service, to send occasional notifications telling
       you that refreshed market data is available. To deliver these, Firebase registers your device with
@@ -188,11 +201,13 @@
     <section>
       <h2>Data Security</h2>
       <p>
-        The developer operates no user accounts and no server that stores personal data, so there is no
-        store of personal information at risk of a server-side breach. All locally cached financial data
-        on your device is protected by Android's standard application sandbox security model. The
-        advertising and push notification identifiers described above are handled by Google under its own
-        security and privacy practices.
+        The developer operates no user accounts, and the only information the app ever sends to a
+        developer-controlled store is a feedback message you choose to submit, which is held in Cloud
+        Firestore and carries no identifying information. There is no database of user profiles, contact
+        details or credentials to be breached. All locally cached financial data on your device is
+        protected by Android's standard application sandbox security model, and the advertising and push
+        notification identifiers described above are handled by Google under its own security and privacy
+        practices.
       </p>
     </section>
 
