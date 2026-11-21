@@ -85,7 +85,7 @@
   </header>
 
   <div class="container">
-    <p class="last-updated">Last updated: 29 August 2026</p>
+    <p class="last-updated">Last updated: 21 November 2026</p>
 
     <section>
       <h2>Overview</h2>
@@ -98,22 +98,32 @@
 
     <section>
       <h2>Data We Do Not Collect</h2>
-      <p>Value Investor does <strong>not</strong> collect, transmit, or store any of the following on external servers:</p>
+      <p>The developer does <strong>not</strong> collect, receive, or store any of the following:</p>
       <ul>
-        <li>Your name, email address, or any personally identifiable information</li>
-        <li>Your account credentials or login details</li>
-        <li>Your location or device location data</li>
-        <li>Your camera, microphone, or contact list data</li>
-        <li>Your browsing history or in-app behaviour analytics</li>
+        <li>Your name, email address, or any other personally identifiable information</li>
+        <li>Account credentials or login details — the app has no accounts</li>
+        <li>GPS or precise device location</li>
+        <li>Camera, microphone, photo, file, or contact list data</li>
+        <li>Your browsing history, or analytics about how you use the app — the developer runs no analytics of its own</li>
       </ul>
       <p>The app does not require an account, login, or registration of any kind.</p>
       <p>
-        Two device-level identifiers are handled by Google services within the app: an advertising
-        identifier used by Google AdMob, and a push notification token used by Firebase Cloud Messaging.
-        Neither identifies you personally, and neither is collected or stored by the developer.
-        Separately, if you choose to send feedback, the message you write is stored so the developer can
-        read it — anonymously, with no identifier attached. All three are described under
-        <em>Third-Party Services</em> below.
+        Some data does leave your device through third-party services built into the app, each described
+        under <em>Third-Party Services</em> below:
+      </p>
+      <ul>
+        <li><strong>Google AdMob</strong> receives your device's advertising identifier, its IP address
+          (which can indicate your approximate location), and information about ad and app interactions,
+          in order to serve ads.</li>
+        <li><strong>Firebase Cloud Messaging</strong> holds a push notification token for your device.</li>
+        <li><strong>TradingView</strong> serves the interactive price charts and receives your device's
+          IP address and basic device information when a chart loads.</li>
+        <li><strong>Cloud Firestore</strong> stores a feedback message, only if you choose to send one,
+          with no identifier attached.</li>
+      </ul>
+      <p>
+        The advertising identifier, notification token and chart data are handled by Google and TradingView;
+        none of them is collected or stored by the developer.
       </p>
     </section>
 
@@ -126,7 +136,13 @@
         <li>Your disclaimer acceptance preference</li>
         <li>Index and sector data refreshed periodically from our cloud data cache</li>
       </ul>
-      <p>This data remains entirely on your device and can be cleared by uninstalling the app.</p>
+      <p>
+        This data is never sent to the developer and can be cleared by uninstalling the app. If Android's
+        own backup is turned on for your Google account, your watchlist and settings may be included in that
+        backup so they can be restored on a new device; that backup is managed by Google under your account,
+        and the developer cannot access it. Your acceptance of the disclaimer is deliberately excluded, so a
+        restored or transferred install always asks you to accept it again.
+      </p>
     </section>
 
     <section>
@@ -134,21 +150,38 @@
       <p>Value Investor uses the following third-party services. Each service operates under its own privacy policy.</p>
 
       <p><strong>Google AdMob</strong><br/>
-      Banner advertisements are served by Google AdMob. AdMob may collect advertising identifiers
-      (Android Advertising ID) and other anonymous usage signals to deliver relevant ads.
-      You can opt out of personalised advertising in your device settings under
-      <em>Privacy → Ads</em>.
-      <br/><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></p>
+      The app shows banner ads, a full-screen ad when you return to the app, and an occasional full-screen
+      ad after a data refresh, all served by Google AdMob. To serve ads, measure them and prevent fraud,
+      the Google Mobile Ads SDK automatically collects and shares with Google:
+      your device's <strong>advertising ID</strong> and app set ID; your device's <strong>IP address</strong>,
+      which may be used to estimate its general location; <strong>interactions</strong> such as app launches,
+      taps and ad views; and <strong>diagnostic information</strong> such as app launch time and
+      performance. This data is encrypted in transit. You can reset or delete your advertising ID, or opt
+      out of personalised ads, in your device's settings (usually <em>Settings → Privacy → Ads</em> or
+      <em>Settings → Google → Ads</em>).
+      <br/><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>
+      · <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses data from apps that use its services</a></p>
 
-      <p style="margin-top:12px;"><strong>Yahoo Finance</strong><br/>
-      Financial data (stock quotes, historical prices, financial statements) is fetched directly
-      from Yahoo Finance public APIs. No personal data is sent to Yahoo Finance. Requests are made
-      using standard HTTP headers. Yahoo Finance's data is used in accordance with their terms of service.
-      <br/><a href="https://legal.yahoo.com/us/en/yahoo/privacy/index.html" target="_blank" rel="noopener">Yahoo Privacy Policy</a></p>
+      <p style="margin-top:12px;"><strong>TradingView (Price Charts)</strong><br/>
+      The interactive price charts on stock screens and in the Chart Guide are TradingView widgets,
+      loaded from TradingView's servers when you open a chart. Loading a chart sends TradingView your
+      device's IP address and basic device and browser information, and TradingView may use cookies and
+      similar technologies for security, analytics and advertising, as described in its own privacy
+      policy. The app passes TradingView only the ticker symbol being charted — no personal information.
+      <br/><a href="https://www.tradingview.com/privacy-policy/" target="_blank" rel="noopener">TradingView Privacy Policy</a></p>
+
+      <p style="margin-top:12px;"><strong>Yahoo Finance (via RapidAPI)</strong><br/>
+      Most financial data (stock quotes, historical prices, financial statements) comes from a Yahoo
+      Finance dataset hosted on RapidAPI. It is fetched by the developer's weekly data pipeline, not by
+      the app on your device, and reaches the app through the data cache described below. Your device
+      never contacts RapidAPI or Yahoo Finance, so no data about you is sent to either.
+      <br/><a href="https://rapidapi.com/privacy" target="_blank" rel="noopener">RapidAPI Privacy Policy</a>
+      · <a href="https://legal.yahoo.com/us/en/yahoo/privacy/index.html" target="_blank" rel="noopener">Yahoo Privacy Policy</a></p>
 
       <p style="margin-top:12px;"><strong>Financial Modeling Prep (FMP)</strong><br/>
-      US index quotes and supplementary financial ratios are sourced from the Financial Modeling Prep API.
-      No personal data is transmitted. API calls contain only stock ticker symbols.
+      Supplementary financial data is sourced from the Financial Modeling Prep API by the developer's
+      weekly data pipeline. As with Yahoo Finance, your device never contacts FMP, and the pipeline's
+      requests contain only stock ticker symbols.
       <br/><a href="https://financialmodelingprep.com/privacy-policy" target="_blank" rel="noopener">FMP Privacy Policy</a></p>
 
       <p style="margin-top:12px;"><strong>Cloudflare R2 (Data Cache)</strong><br/>
@@ -186,15 +219,24 @@
         <li><strong>com.google.android.gms.permission.AD_ID</strong> — Allows Google AdMob to access the Android Advertising ID in order to serve ads. You can reset or delete this identifier at any time in your device settings.</li>
         <li><strong>POST_NOTIFICATIONS</strong> — Allows the app to show notifications when refreshed market data is available. You are asked for this permission, and may decline it without affecting any other feature.</li>
       </ul>
-      <p>No other permissions are requested. The app does not access your camera, microphone, contacts, location, storage, or phone state.</p>
+      <p>
+        The Google libraries built into the app also add the following permissions automatically. None of
+        them is shown to you as a prompt, and none gives access to personal content:
+      </p>
+      <ul>
+        <li><strong>ACCESS_ADSERVICES_AD_ID, ACCESS_ADSERVICES_ATTRIBUTION, ACCESS_ADSERVICES_TOPICS</strong> — Added by Google AdMob for Android's Privacy Sandbox advertising features, which you can control in your device's privacy settings.</li>
+        <li><strong>com.google.android.c2dm.permission.RECEIVE</strong> — Lets Firebase Cloud Messaging deliver notifications.</li>
+        <li><strong>WAKE_LOCK, FOREGROUND_SERVICE, VIBRATE</strong> — Let Android's background-work and notification libraries finish short tasks and vibrate for a notification.</li>
+      </ul>
+      <p>The app does not access your camera, microphone, contacts, location, photos, files, or phone state.</p>
     </section>
 
     <section>
       <h2>Children's Privacy</h2>
       <p>
-        Value Investor is not directed at children under the age of 13. We do not knowingly collect any
-        personal information from children. The app is intended for users aged 13 and over.
-        Google AdMob ads served within the app are not configured for child-directed treatment.
+        Value Investor is intended for adults aged 18 and over and is not directed at children. We do not
+        knowingly collect any personal information from children. Google AdMob ads served within the app
+        are not configured for child-directed treatment.
       </p>
     </section>
 
@@ -205,9 +247,9 @@
         developer-controlled store is a feedback message you choose to submit, which is held in Cloud
         Firestore and carries no identifying information. There is no database of user profiles, contact
         details or credentials to be breached. All locally cached financial data on your device is
-        protected by Android's standard application sandbox security model, and the advertising and push
-        notification identifiers described above are handled by Google under its own security and privacy
-        practices.
+        protected by Android's standard application sandbox security model. The advertising, notification
+        and chart data described above is handled by Google and TradingView under their own security and
+        privacy practices.
       </p>
     </section>
 
@@ -242,8 +284,10 @@
       <p>
         This application is developed in Australia. The developer is committed to complying with the
         <em>Privacy Act 1988</em> (Cth) and the Australian Privacy Principles (APPs) where applicable.
-        As no personal information is collected, most APP obligations do not apply; however, we are
-        committed to transparency about our data practices.
+        The developer does not collect personal information such as your name, contact details or account
+        data. Device identifiers, IP addresses and interaction data are collected by the third-party services
+        described above, under their own privacy policies, and the developer is committed to being
+        transparent about every one of them.
       </p>
     </section>
 
@@ -281,8 +325,8 @@
       Always verify data from official sources before acting.</p>
 
       <p style="margin-top:12px;"><strong>Data Accuracy</strong><br/>
-      Financial data is sourced from third-party providers including Yahoo Finance, Financial Modeling Prep,
-      and Cloudflare R2. While every effort is made to display accurate information, the developer makes no
+      Financial data is sourced from third-party providers including a RapidAPI-hosted Yahoo Finance dataset
+      and Financial Modeling Prep, and is distributed to the app through a Cloudflare R2 data cache. While every effort is made to display accurate information, the developer makes no
       representations or warranties regarding the accuracy, completeness, timeliness, or reliability of any
       data shown. Data may contain errors or omissions.</p>
 
